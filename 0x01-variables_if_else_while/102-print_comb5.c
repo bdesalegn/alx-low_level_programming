@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-	int num, num1, num2;
+	int num, num1;
 	/* prints all possible combinations of single-digit numbers. */
 	for (num = 0; num < 8; num++)
 	{
@@ -22,7 +22,7 @@ int main(void)
 			putchar(num1 + '0');
 			if (num == 98 && num1 == 99)
 				continue;
-			putchar(', ');
+			putchar(',');
 			putchar(' ');
 		}
 	}
