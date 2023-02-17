@@ -13,10 +13,10 @@ int main(void)
 	/* prints all possible combinations of single-digit numbers. */
 	for (num = 0; num < 9; num++)
 	{
-		count = n + 1;
+		count = num + 1;
 		do {
 			putchar(num + '0');
-			putchar(counti + '0');
+			putchar(count + '0');
 			if (num < 8)
 			{	putchar(',');
 				putchar(' ');
