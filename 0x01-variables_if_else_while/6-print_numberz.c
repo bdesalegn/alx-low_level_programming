@@ -13,7 +13,7 @@ int main(void)
 	/*print single digit numbers */
 	for (num = 0; num < 10; num++)
 	{
-		putchar("%d", num);
+		putchar(num + '0');
 	}
 	putchar('\n');
 	return (0);
