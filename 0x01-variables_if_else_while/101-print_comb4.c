@@ -20,8 +20,8 @@ int main(void)
 				putchar(num + '0');
 				putchar(num1 + '0');
 				putchar(num2 + '0');
-				if (num == 7 && num1 == 8 && num2 == 9)
-					continue;
+				/*if (num == 7 && num1 == 8 && num2 == 9)*/
+					/*continue;*/
 			}
 		}
 	}
