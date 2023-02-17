@@ -13,7 +13,7 @@ int main(void)
 	char CH;
 
 	/* print lowercase letters */
-	for (CH = 'A' ; CH <= 'z'; CH++)
+	for (CH = 'A' ; CH <= 'Z'; CH++)
 	{
 		putchar(CH);
 	}
