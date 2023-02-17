@@ -10,11 +10,13 @@
 int main(void)
 {
 	char ch;
-	/*print lowercase letters */
-	while ((ch = !'e') && (ch = !'q'))
+	/*print lowercase letters ecept q or e*/
+	for (ch == 'a'; ch <= 'z'; ch++)
 	{
-		ch++;
-		putchar(ch)
+		if ((ch != 'e') && (ch != 'q'))
+		{
+		putchar(ch);
+		}
 	}
 	putchar('\n');
 	return (0);
