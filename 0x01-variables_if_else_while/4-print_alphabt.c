@@ -11,7 +11,7 @@ int main(void)
 {
 	char ch;
 	/*print lowercase letters ecept q or e*/
-	for (ch == 'a'; ch <= 'z'; ch++)
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
 		if ((ch != 'e') && (ch != 'q'))
 		{
