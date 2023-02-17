@@ -16,7 +16,7 @@ int main(void)
 	/*prints all the numbers of base 16 in lowercase*/
 	for (n = 0 ; n < 10; n++)
 	{
-		putchar('0', n);
+		putchar('0' + n);
 	}
 	for (ch = 'a' ; ch <= 'f'; ch++)
 	{
