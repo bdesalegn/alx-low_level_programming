@@ -13,8 +13,8 @@ int main(void)
 	/*print lowercase letters */
 	while ((ch = !'e') && (ch = !'q'))
 	{
-		putchar(ch);
 		ch++;
+		putchar(ch)
 	}
 	putchar('\n');
 	return (0);
