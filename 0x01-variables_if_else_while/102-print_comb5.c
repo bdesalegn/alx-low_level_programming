@@ -11,9 +11,9 @@ int main(void)
 {
 	int num, num1;
 	/* prints all possible combinations of single-digit numbers. */
-	for (num = 0; num < 8; num++)
+	for (num = 0; num < 98; num++)
 	{
-		for (num1 = 0; num1 < 8; num1++)
+		for (num1 = num + 1; num1 < 99; num1++)
 		{
 			putchar(num + '0');
 			putchar(num + '0');
