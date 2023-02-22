@@ -13,6 +13,6 @@ int _abs(int ab_num)
 	}
 	else
 	{
-		return (ab_numn);
+		return (ab_num);
 	}
 }
