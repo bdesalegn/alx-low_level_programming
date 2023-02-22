@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * _abs - compute the absulute value of the integer.
@@ -8,9 +7,12 @@
  */
 int _abs(int ab_num)
 {
-	int x;
-
-	x = abs(ab_num);
-	return (x);
+	if (n < 0)
+	{
+		return (-n);
+	}
+	else
+	{
+		return (n);
+	}
 }
-
