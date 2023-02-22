@@ -7,15 +7,13 @@
  */
 int main(void)
 {
-	int i, a = 1, b = 2, c;
+	unsigned long int i, a = 1, b = 2, c;
 
 	printf("%d %d ", a, b);
 	for (i = 3; i <= 50; i++)
 	{
 		c = a + b;
-		printf("%d ", c);
-		putchar(',');
-		putchar(' ');
+		printf(", %d ", c);
 		a = b;
 		b = c;
 	}
