@@ -10,10 +10,10 @@ void print_to_98(int n)
 	{
 		for (int i = n; i <= 98; i++)
 		{
-			_putchar("%d", i)
+			printf("%d", i)
 			if (i != 98)
 			{
-				_putchar(", ");
+				printf(", ");
 			}
 		}
 	}
@@ -21,12 +21,12 @@ void print_to_98(int n)
 	{
 		for (int i = n; i >= 98; i--)
 		{
-			_putchar("%d", i);
+			printf("%d", i);
 			if (i != 98)
 			{
-				_putchar(", ");
+				printf(", ");
 			}
 		}
 	}
-	_putchar("\n");
+	printf("\n");
 }
