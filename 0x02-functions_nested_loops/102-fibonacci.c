@@ -7,10 +7,10 @@
  */
 int main(void)
 {
-	int a = 1, b = 2, c;
+	int i, a = 1, b = 2, c;
 
 	printf("%d %d ", a, b);
-	for (int i = 3; i <= 50; i++)
+	for (i = 3; i <= 50; i++)
 	{
 		c = a + b;
 		printf("%d ", c);
