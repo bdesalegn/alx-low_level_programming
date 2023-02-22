@@ -14,6 +14,8 @@ int main(void)
 	{
 		c = a + b;
 		printf("%d ", c);
+		printf(',');
+		printf(' ');
 		a = b;
 		b = c;
 	}
