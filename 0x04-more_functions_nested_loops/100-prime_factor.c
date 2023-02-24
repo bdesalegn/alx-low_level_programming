@@ -19,7 +19,7 @@ int main(void)
 				printf(",%lu ", prime_num);
 		}
 
-		prime_num + = 2;
+		prime_num += 2;
 	}
 
 	putchar('\n');
