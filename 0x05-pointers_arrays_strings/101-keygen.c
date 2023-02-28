@@ -9,11 +9,11 @@
 
 int main(void)
 {
-	char pass_Gen[8];
+	char pass_Gen[7];
 	int i;
 
 	srand(time(NULL));
-	for (i = 0; i < 8; i++)
+	for (i = 0; i < 7; i++)
 	{
 		pass_Gen[i] = rand() % 94 + 33;
 	}
