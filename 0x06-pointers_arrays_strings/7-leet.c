@@ -12,16 +12,17 @@
 char *leet(char *str)
 {
 	char *result = str;
-	char *leetChars[5] = {"4", "3", "0", "7", "1"};
-	char *normalChars[5] = {"aA", "eE", "oO", "tT", "lL"};
+	char *leetChars[] = {"4", "3", "0", "7", "1"};
+	char *normalChars[] = {"aA", "eE", "oO", "tT", "lL"};
+	/*char *smallChar[] = {"a", "e", "o", "t", "l"};*/
 
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; str[i] != '\0'; ++i)
 	{
-		for (int j = 0; str[j] != '\0'; j++)
+		for (int j = 0; j < 5; j++)
 		{
-			if (str[j] == normalChars[i] || str[j] == normalChars[i])
+			if (str[i] == normalChars[j] || str[i] == normalChars[j])
 			{
-				result[j] = leetChars[i];
+				result[i] = leetChars[j];
 			}
 		}
 	}
