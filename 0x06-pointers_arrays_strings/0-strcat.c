@@ -1,12 +1,10 @@
 #include "main.h"
 
 /**
- *_strcat - Write a function that concatenates two strings.
- *
- *@dest: This is the output dest
- *@src: This is the input source
- *
- * Return: This return to dest
+ * _strcat - a function that concatenates two strings
+ * @dest: copy to
+ * @src: copy from
+ * Return: two concat strings
  */
 char *_strcat(char *dest, char *src)
 {
