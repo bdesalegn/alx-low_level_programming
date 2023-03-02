@@ -19,7 +19,7 @@ char *leet(char *str)
 	{
 		for (j = 0; j < 5; j++)
 		{
-			if (str[i] == smallChars[j] || str[i] == caChars[j])
+			if (str[i] == smallChars[j] || str[i] == capChars[j])
 			{
 				str[i] = numbers[j];
 			}
