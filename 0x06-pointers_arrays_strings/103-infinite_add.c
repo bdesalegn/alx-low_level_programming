@@ -7,49 +7,39 @@
  * @size_r:int
  * Return:char.
  */
-
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int len1 = strlen(n1);
-	int len2 = strlen(n2);
+int i, j, k, l, m, n;
 
-	if (len1 > size_r || len2 > size_r)
-	{
+	for (i = 0; n1[i]; i++)
+		;
+	for (j = 0; n2[j]; j++)
+		;
+	if (i > size_r || j > size_r)
 		return (0);
-	}
-
-	int carry = 0;
-	int i, j, k;
-
-	for (i = len1 - 1, j = len2 - 1, k = size_r - 1; i >= 0 ||
-			j >= 0; i--, j--, k--)
+	m = 0;
+	for (i -= 1, j -= 1, k = 0; k < size_r - 1; i--, j--, k++)
 	{
-		int digit1 = i >= 0 ? n1[i] - '0' : 0;
-		int digit2 = j >= 0 ? n2[j] - '0' : 0;
-		int sum = digit1 + digit2 + carry;
-
-		if (sum >= 10)
+		n = m;
+		if (i >= 0)
+			n += n1[i] - '0';
+		if (j >= 0)
+			n += n2[j] - '0';
+		if (i < 0 && j < 0 && n == 0)
 		{
-			carry = 1;
-			sum -= 10;
+			break;
 		}
-		else
-		{
-			carry = 0;
-		}
-		r[k] = sum + '0';
+		m = n / 10;
+		r[k] = n % 10 + '0';
 	}
-	if (carry > 0)
+	r[k] = '\0';
+	if (i >= 0 || j >= 0 || m)
+		return (0);
+	for (k -= 1, l = 0; l < k; k--, l++)
 	{
-		if (size_r == len1 + len2 + 1)
-		{
-			r[0] = '1';
-			return (r);
-		}
-		else
-		{
-			return (0);
-		}
+		m = r[k];
+		r[k] = r[l];
+		r[l] = m;
 	}
-	return (&r[k + 1]);
+	return (r);
 }
