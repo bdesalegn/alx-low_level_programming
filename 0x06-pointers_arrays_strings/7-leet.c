@@ -19,9 +19,9 @@ char *leet(char *str)
 	{
 		for (int j = 0; str[j] != '\0'; j++)
 		{
-			if (str[j] == normalChars[i][0] || str[j] == normalChars[i][1])
+			if (str[j] == normalChars[i] || str[j] == normalChars[i])
 			{
-				result[j] = leetChars[i][0];
+				result[j] = leetChars[i];
 			}
 		}
 	}
