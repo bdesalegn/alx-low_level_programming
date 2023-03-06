@@ -10,19 +10,25 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	int i;
+	int i = 0, b;
 
-	while (*s)
+	while (s[i])
 	{
-		for (i = 0; accept[i]; i++)
+		b = 0;
+
+		while (accept[b])
 		{
-			if (*s == accept[i])
+			if (s[a] == accept[b])
 			{
-				return (s); /*/ return the matching character in s */
+				s += i;
+				return (s);
 			}
-			s++;
+
+			b++;
 		}
-		s++;
+
+		i++;
 	}
-	return (NULL); /*/ if no matching character is found */
+
+	return ('\0');
 }
