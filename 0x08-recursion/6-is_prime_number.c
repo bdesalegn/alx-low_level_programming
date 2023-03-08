@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 
 
 /**
@@ -10,20 +11,13 @@
  * On error, -1 is returned, and errno.
  */
 
-int is_divisible(int n, int i)
+int is_divisible(int a, int b}
 {
-	if (i > _sqrt_recursion(n))
-	{
-		return (0);
-	}
-	else if (n % i == 0)
-	{
+	if (a == b)
 		return (1);
-	}
-	else
-	{
-		return (is_divisible(n, i + 1));
-	}
+	else if (a % b == 0)
+		return (0);
+	return (is_divisible(a, b + 1));
 }
 /**
  * is_prime_number - checks if a number is prime
@@ -40,6 +34,6 @@ int is_prime_number(int n)
 	}
 	else
 	{
-		return (!is_divisible(n, 2));
+		return (is_divisible(n, 2));
 	}
 }
