@@ -1,5 +1,5 @@
 #include "main.h"
-#include <math.h>
+
 
 /**
  * is_divisible - Makes possible to evaluate from 1 to n
