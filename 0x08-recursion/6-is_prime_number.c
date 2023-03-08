@@ -1,4 +1,30 @@
 #include "main.h"
+#include <math.h>
+
+/**
+ * is_divisible - Makes possible to evaluate from 1 to n
+ * @n: same number as n
+ * @i: number that iterates from 1 to n
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno.
+ */
+
+int is_divisible(int n, int i)
+{
+	if (i > sqrt(n))
+	{
+		return (0);
+	}
+	else if (n % i == 0)
+	{
+		return (1);
+	}
+	else
+	{
+		return (is_divisible(n, i + 1));
+	}
+}
 /**
  * is_prime_number - checks if a number is prime
  * @n: Number Integer
@@ -8,25 +34,12 @@
  */
 int is_prime_number(int n)
 {
-	int i, temp = 0;
-
-	for (i = 2; i <= n/ 2; i++)
+	if (n <= 1)
 	{
-        /* check if num is divisible by any number.*/
-		if (n % i == 0)
-		{
-			temp++;
-			break;
-		}
-	}
-	/* check for the value of temp and num.*/
-	if (temp == 0 && n != 1)
-	{
-		return (n);
+		return (0);
 	}
 	else
 	{
-		return (n);
+		return (!is_divisible(n, 2));
 	}
-	return (0);
 }
