@@ -42,4 +42,4 @@ int sqrt_find(int n, int i)
 	{
 		return (sqrt_find(n, i + 1));
 	}
-
+}
