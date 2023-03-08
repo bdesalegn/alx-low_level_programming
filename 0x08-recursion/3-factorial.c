@@ -2,7 +2,7 @@
 /**
  * factorial - gets factorial of n
  * @n: input integer
- * Return : On sucess (n+ factorial(n-1) or 1 error -1.
+ * Return : Always sucess (n+ factorial(n-1) or 1 error -1.
  */
 int factorial(int n)
 {
