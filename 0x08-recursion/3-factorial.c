@@ -3,7 +3,7 @@
  * factorial - gets factorial of n
  * @n: positive integer or 0
  * Return : On sucess 1.
- *
+ * On error, -1 is returned.
  */
 int factorial(int n)
 {
