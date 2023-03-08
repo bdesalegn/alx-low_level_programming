@@ -12,7 +12,7 @@
 
 int is_divisible(int n, int i)
 {
-	if (i > sqrt(n))
+	if (i > _sqrt_recursion(n))
 	{
 		return (0);
 	}
