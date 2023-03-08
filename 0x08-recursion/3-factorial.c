@@ -2,7 +2,8 @@
 /**
  * factorial - gets factorial of n
  * @n: positive integer or 0
- * return : On sucess fact, -1 for negative , 1 for 0
+ * Return : On sucess 1. 
+ * 
  */
 int factorial(int n)
 {
@@ -21,7 +22,7 @@ int factorial(int n)
 		for (i = 1; i <= n; ++i)
 		{
 			fact *= i;
+			return (fact);
 		}
-		return (fact);
 	}
 }
