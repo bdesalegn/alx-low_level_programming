@@ -8,18 +8,18 @@
  */
 int is_prime_number(int n)
 {
-	int i,temp = 0;
+	int i, temp = 0;
 
-	/*iterate up to n/2.*/
-	for (i = 2; i <= n / 2; i++)
+	for (i = 2; i <= n/ 2; i++)
 	{
+        /* check if num is divisible by any number.*/
 		if (n % i == 0)
 		{
 			temp++;
 			break;
 		}
 	}
-	/*check for the value of temp and num.*/
+	/* check for the value of temp and num.*/
 	if (temp == 0 && n != 1)
 	{
 		return (n);
