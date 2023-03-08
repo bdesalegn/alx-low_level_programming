@@ -4,8 +4,8 @@
 
 /**
  * is_divisible - Makes possible to evaluate from 1 to n
- * @n: same number as n
- * @i: number that iterates from 1 to n
+ * @a: same number as a
+ * @b: number that iterates from 1 to n
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno.
