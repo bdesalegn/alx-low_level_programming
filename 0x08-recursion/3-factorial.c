@@ -1,9 +1,8 @@
 #include "main.h"
 /**
  * factorial - gets factorial of n
- * @n: positive integer or 0
- * Return : On sucess 1.
- * On error, -1 is returned.
+ * @n: input integer
+ * Return : On sucess (n+ factorial(n-1) or 1 error -1.
  */
 int factorial(int n)
 {
