@@ -11,7 +11,7 @@
  * On error, -1 is returned, and errno.
  */
 
-int is_divisible(int a, int b}
+int is_divisible(int a, int b)
 {
 	if (a == b)
 		return (1);
