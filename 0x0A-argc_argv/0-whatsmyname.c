@@ -2,9 +2,9 @@
 #include <stdio.h>
 /**
  * main - print name
- * @argc: integer value.
+ * @argc: count integer value.
  * @argv: string
- * return: Always 0.
+ * Return: Always 0.
 */
 int main(int argc, char *argv[])
 {
@@ -12,8 +12,8 @@ int main(int argc, char *argv[])
 
 	while (i < argc)
 	{
-		_putchar("%s\n" + argv[i]);
+		printf("%s\n", argv[i]);
 		++i;
 	}
-		return 0;
+	return (0);
 }
