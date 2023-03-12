@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 		{
 			if (argv[i][0] == '0')
 			{
-				printf("Error: 0 is not a positive number\n");
+				printf("0\n");
 			}
 			else
 			{
