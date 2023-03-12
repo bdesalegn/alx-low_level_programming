@@ -8,18 +8,26 @@
  */
 int main(int argc, char *argv[])
 {
-	if (argc != 3)
-	{
-		printf("Error\n");
-		return (1);
-	}
-	else
-	{
-		int num1 = atoi(argv[1]);
-		int num2 = atoi(argv[2]);
-		int result = num1 +  num2;
+	int i, sum = 0;
 
-		printf("%d\n", result);
+	for (i = 1; i < argc; i++)
+	{
+		int num = atoi(argv[i]);
+
+		if (num <= 0)
+		{
+			if (argv[i][0] == '0')
+			{
+				printf("Error: 0 is not a positive number\n");
+			}
+			else
+			{
+				printf("Error: '%s' is not a positive number\n", argv[i]);
+			}
+			return (1);
+		}
+		sum += num;
 	}
+	printf("%d\n", sum);
 	return (0);
 }
