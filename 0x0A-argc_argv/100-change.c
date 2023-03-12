@@ -32,17 +32,16 @@ int change_cents(int num_coins)
 {
 	int i;
 	int denominations[] = {25, 10, 5, 2, 1};
-	int num_denominations = 5;
 
 	num_coins = 0;
 
-	for (i = 0; i < num_denominations; i++)
+	for (i = 0; i < denominations[i]; i++)
 	{
-		int denomination = denominations[i];
+		num_coins += denominations[i]/denominations[i];
 
-		num_coins -= denomination;
 
 		/**
+		 * num_coins -= denomination;
 		 * int coins = cents / denomination;
 		 * num_coins += coins;
 		 * cents -= coins * denomination;
