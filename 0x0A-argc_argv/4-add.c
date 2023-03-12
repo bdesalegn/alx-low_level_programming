@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 			}
 			else
 			{
-				printf("Error: '%s' is not a positive number\n", argv[i]);
+				printf("Error\n");
 			}
 			return (1);
 		}
