@@ -20,19 +20,10 @@ int main(int argc, char *argv[])
 	{
 		int num = atoi(argv[i]);
 
-			/*if (argv[i][0] == '0')*/
 		if (argv[i][0] < '0' || argv[i][0] > '9')
 		{
 			printf("Error\n");
 			return (1);
-				/**
-				 * printf("0\n");
-				 * }
-				 * else
-				 * {
-				 * printf("Error\n");
-				 * }
-				 */
 		}
 		sum += num;
 	}
