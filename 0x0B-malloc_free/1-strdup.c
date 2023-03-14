@@ -21,5 +21,5 @@ char *_strdup(char *str)
 	}
 	/*strcpy(dup, str);*/
 	dupt = str;
-	return (dup);
+	return (dupt);
 }
