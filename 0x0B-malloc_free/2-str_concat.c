@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stddef.h>
-#include "Main.h"
+#include "main.h"
 /**
  * str_concat - coppy s1 to s2
  * @s1: string s1.
