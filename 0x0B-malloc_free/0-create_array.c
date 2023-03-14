@@ -9,6 +9,8 @@
 
 char *create_array(unsigned int size, char c)
 {
+	unsigned int i;
+	char *array;
 	/* Check for zero size input*/
 	if (size == 0)
 	{
@@ -16,9 +18,7 @@ char *create_array(unsigned int size, char c)
 	}
 	/* Allocate memory for the array*/
 
-	char *array;
-
-	array = (char *) malloc(sizeof(char) * size);
+	array = malloc(size * sizeof(char));
 
 	if (array == NULL)
 	{
@@ -26,6 +26,7 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	}
 	/* Initialize the array with the specified char*/
+
 	unsigned int i;
 
 	for (i = 0; i < size; i++)
