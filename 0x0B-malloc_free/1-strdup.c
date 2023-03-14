@@ -6,20 +6,29 @@
  * @str: String pointer
  * Return: coppy of the string
  */
-char *_strdup(char *str)
+char* _strdup(char* str)
 {
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	char *dupt;
+	int len = 0;
 
-	dupt = malloc(strlen(str) + 1);
-	if (dupt == NULL)
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+	char* cop = malloc(len + 1);
+	
+	if (cop == NULL)
 	{
 		return (NULL);
 	}
-	/*strcpy(dup, str);*/
-	dupt = str;
-	return (dupt);
+	for (int i = 0; i <= len; i++)
+	{
+		cop[i] = str[i];
+	}
+		return (cop);
+		
+		free(cop);
 }
