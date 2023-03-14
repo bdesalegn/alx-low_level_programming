@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stddef.h>
+#include <stdio.h>
 #include "main.h"
 /**
  * str_concat - coppy s1 to s2
@@ -13,7 +14,8 @@ char *str_concat(char *s1, char *s2)
 	s1 = "";
 	if (!s2)
 	s2 = "";
-	unsigned int i, len1 = 0;
+	unsigned int len1 = 0;
+	int i;
 
 	while (s1[len1] != '\0')
 	{
