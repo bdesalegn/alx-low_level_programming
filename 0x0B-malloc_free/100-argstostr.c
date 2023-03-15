@@ -26,11 +26,13 @@ char *argstostr(int ac, char **av)
 		}
 		total_len += len + 1;
 	}
+
 	result = malloc(total_len * sizeof(char));
 	if (result == NULL)
 	{
 		return (NULL);
 	}
+
 	for (i = 0; i < ac; i++)
 	{
 		arg = av[i];
@@ -39,12 +41,10 @@ char *argstostr(int ac, char **av)
 		{
 			result[offset + len] = arg[len];
 			len++;
-		{
-		       result[offset + len] = '\n';
-		       offset += len + 1;
 		}
-		result[offset] = '\0';
-	return (result);
-		}
+		result[offset + len] = '\n';
+		offset += len + 1;
 	}
+	result[offset] = '\0';
+	return (result);
 }
