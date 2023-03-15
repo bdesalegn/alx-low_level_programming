@@ -13,7 +13,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
     /*count the total length of all arguments*/
-	int total_len = 0; 
+	unsigned int total_len = 0; 
 	int offset = 0;
 	int i, len = 0;
 	char *arg, *result;
