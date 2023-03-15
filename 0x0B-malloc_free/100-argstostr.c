@@ -45,4 +45,6 @@ char *argstostr(int ac, char **av)
 		}
 		result[offset] = '\0';
 	return (result);
+		}
+	}
 }
