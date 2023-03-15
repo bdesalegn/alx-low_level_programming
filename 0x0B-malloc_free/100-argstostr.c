@@ -24,7 +24,7 @@ char *argstostr(int ac, char **av)
 		{
 			len++;
 		}
-		int total_len += len + 1;
+		len += len + 1;
 
 	}
 
