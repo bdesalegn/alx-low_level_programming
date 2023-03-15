@@ -40,10 +40,10 @@ char *argstostr(int ac, char **av)
 		len = 0;
 		while (arg[len] != '\0')
 		{
-			result[offset + len] = arg[len];
+			result[(offset + len)] = arg[len];
 			len++;
 		}
-		result[offset + len] = '\n';
+		result[(offset + len)] = '\n';
 		offset += len + 1;
 	}
 	result[offset] = '\0';
