@@ -13,7 +13,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
     /*count the total length of all arguments*/
-	int total_len = 0,  offset = 0;
+	int total_len = 0, offset = 0;
 	int i, len = 0;
 	char *arg, *result;
 
@@ -25,6 +25,7 @@ char *argstostr(int ac, char **av)
 			len++;
 		}
 		total_len += len + 1;
+
 	}
 
 	result = malloc(total_len * sizeof(char));
