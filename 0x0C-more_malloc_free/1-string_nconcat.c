@@ -2,8 +2,8 @@
 #include "main.h"
 /**
  * string_nconcat - concatenates two strings.
- * @s1:char pointer
- * @s2:char pointer
+ * @s1:1st string
+ * @s2:2nd string
  * @n: psitive integer
  * Return: If the function fails - NULL.
  * Otherwise - a pointer to the concatenated space in memory.
@@ -25,7 +25,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		len1++;
 	}
-	char *result = (char *) malloc(sizeof(char) * (len1 + n + 1));
+	char *result = malloc(sizeof(char) * (len1 + n + 1));
 
 	if (result == NULL)
 	{
