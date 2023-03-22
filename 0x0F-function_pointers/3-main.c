@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "calc.h"
+#include "3-calc.h"
 #include "function_pointers.h"
 /**
  * main - check the program
