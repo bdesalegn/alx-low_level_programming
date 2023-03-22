@@ -42,7 +42,10 @@ int op_mul(int a, int b)
 int op_div(int a, int b)
 {
 	if (b == 0)
-		return (0);
+	{
+		printf("Error: division by zero\n");
+		exit(EXIT_FAILURE);
+	}
 	return (a / b);
 }
 
@@ -55,6 +58,9 @@ int op_div(int a, int b)
 int op_mod(int a, int b)
 {
 	if (b == 0)
-		return (0);
+	{
+		printf("Error: division by zero\n");
+		exit(EXIT_FAILURE);
+	}
 	return (a % b);
 }
