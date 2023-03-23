@@ -8,43 +8,29 @@
  * @argv: vector arguments
  * Return: 0 if false, something else otherwise.
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int (*get)(int, int);
-	int a, b, operator;
-
+	int a, b;
+	int result;
+	int (*op_func)(int, int);
 
 	if (argc != 4)
 	{
-		printf("Error\n");
-		exit(98);
+		printf("Error: incorrect number of arguments\n");
+		return (98);
 	}
-	if (strlen(argv[2]) != 1)
-	{
-		printf("Error\n");
-		exit(99);
-	}
-	operator = argv[2][0];
-	switch (operator)
-	{
-	case '+':
-		break;
-	case '-':
-		break;
-	case '*':
-		break;
-	case '/':
-		break;
-	case '%':
-		break;
-	default:
-		printf("Error\n");
-		exit(99);
-	}
-
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	get = get_op_func(argv[2]);
-	printf("%d\n", get(a, b));
-	return (0);
+
+	op_func = get_op_func(argv[2]);
+
+	if (op_func == NULL)
+	{
+		printf("Error: invalid operator\n");
+		return (99);
+	}
+
+	result = op_func(a, b);
+	printf("%d\n", result);
+	return (100);
 }
