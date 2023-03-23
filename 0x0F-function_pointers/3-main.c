@@ -16,8 +16,8 @@ int main(int argc, char **argv)
 
 	if (argc != 4)
 	{
-		printf("Error: incorrect number of arguments\n");
-		return (98);
+		printf("Error\n");
+		exit(98);
 	}
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
@@ -26,11 +26,15 @@ int main(int argc, char **argv)
 
 	if (op_func == NULL)
 	{
-		printf("Error: invalid operator\n");
-		return (99);
+		printf("Error\n");
+		exit(99);
 	}
-
+	if ((num2 == 0) || (num2 == 0))
+	{
+		printf("Error\n");
+		exit(100);
+	}
 	result = op_func(a, b);
 	printf("%d\n", result);
-	return (100);
+	return (0);
 }
