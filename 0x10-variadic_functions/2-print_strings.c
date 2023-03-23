@@ -28,11 +28,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			printf("%s", str);
 		}
-		if (i < n && separator != NULL)
+		if (i < n && separator)
 		{
 			printf("%s", separator);
 		}
-	
 	}
 	printf("\n");
 	va_end(args);
