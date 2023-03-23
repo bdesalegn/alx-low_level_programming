@@ -8,7 +8,7 @@
  * @argv: vector arguments
  * Return: 0 if false, something else otherwise.
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv)
 {
 	int a, b;
 	int result;
@@ -29,12 +29,8 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(99);
 	}
-	if ((num2 == 0) || (num2 == 0))
-	{
-		printf("Error\n");
-		exit(100);
-	}
 	result = op_func(a, b);
 	printf("%d\n", result);
+
 	return (0);
 }
