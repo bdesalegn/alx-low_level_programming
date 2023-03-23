@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "3-calc.h"
-#include "function_pointers.h"
+
 /**
- * main - check the program
- * @argc: arguments cant
+ * main - calculate arthimetic operatios
+ * @argc: arguments count
  * @argv: vector arguments
  * Return: 0 if false, something else otherwise.
  */
@@ -16,8 +16,8 @@ int main(int argc, char **argv)
 
 	if (argc != 4)
 	{
-		printf("Error: incorrect number of arguments\n");
-		return (EXIT_FAILURE);
+		printf("Error\n");
+		return (98);
 	}
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
@@ -25,8 +25,8 @@ int main(int argc, char **argv)
 
 	if (op_func == NULL)
 	{
-		printf("Error: invalid operator\n");
-		return (EXIT_FAILURE);
+		printf("Erro\n");
+		return (99);
 	}
 	result = op_func(a, b);
 	printf("%d\n", result);
