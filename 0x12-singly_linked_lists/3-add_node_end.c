@@ -1,7 +1,5 @@
 #include "lists.h"
 #include <stdlib.h>
-#include <stdio.h>
-#include <stddef.h>
 #include <string.h>
 /**
   * add_node_end - add new nodes to the end of the list
