@@ -1,4 +1,5 @@
 #include "lists.h"
+#include<stdlib.h>
 /**
   * listint_len - gets the number of nodes in a list
   * @h: singly linked list to print
