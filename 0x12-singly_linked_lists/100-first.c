@@ -3,6 +3,7 @@
  * print_intro - prints a sentence before the main
  * function is executed
  */
+void print_intro(void) __attribute__ ((constructor));
 
 void print_intro(void)
 {
