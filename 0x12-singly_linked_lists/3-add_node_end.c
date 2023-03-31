@@ -13,12 +13,13 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new_node = malloc(sizeof(list_t));
+	char *str_copy;
 
 	if (new_node == NULL)
 	{
 		return (NULL); /* Failed to allocate memory for new node*/
 	}
-	char *str_copy = strdup(str);
+	str_copy = strdup(str);
 
 	if (str_copy == NULL)
 	{
