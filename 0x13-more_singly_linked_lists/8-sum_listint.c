@@ -10,7 +10,7 @@
 
 int sum_listint(listint_t *head)
 {
-	int sum = 0; /* variable to store the sum of data */
+	size_t sum = 0; /* variable to store the sum of data */
 
     /* iterate over the linked list */
 	while (head != NULL)
