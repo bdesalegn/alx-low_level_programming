@@ -1,30 +1,39 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
 
 /**
- * print_listint_safe - Prints all the elements of a listint_t list.
- * @head: A pointer to the head node of the list.
+ * print_listint_safe - Prints a list of integers safely.
  *
- * Return: The number of nodes in the list.
+ * @head: Pointer to the head node of the list.
+ *
+ * Return: Number of nodes in the list.
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *current = head;
+	const listint_t *slow, *fast;
 	size_t count = 0;
 
-	while (current != NULL)
+	if (head == NULL)
+		exit(98);
+	slow = head;
+	fast = head;
+
+	while (slow && fast && fast->next)
 	{
-		count++;
-		printf("[%p] %d\n", (void *)current, current->n);
-		/* Move to the next node */
-		current = current->next;
-		/* Check if we're stuck in a loop */
-		if (current >= head && current < current)
+		slow = slow->next;
+		fast = fast->next->next;
+		if (slow == fast)
 		{
-			printf("-> [%p] %d\n", (void *)current, current->n);
+			printf("Error: infinite loop detected in list\n");
 			exit(98);
 		}
+	}
+	while (head)
+	{
+		printf("%d\n", head->n);
+		count++;
+		if (head == slow)
+			break;
+		head = head->next;
 	}
 	return (count);
 }
