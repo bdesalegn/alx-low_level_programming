@@ -9,31 +9,21 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *slow, *fast;
+	const listint_t *current = head;
+	const listint_t *next;
 	size_t count = 0;
 
-	if (head == NULL)
-		exit(98);
-	slow = head;
-	fast = head;
-
-	while (slow && fast && fast->next)
+	while (current != NULL)
 	{
-		slow = slow->next;
-		fast = fast->next->next;
-		if (slow == fast)
+		printf("[%p] %d\n", (void *) current, current->n);
+		count++;
+		next = current->next;
+		if (next >= current)
 		{
-			printf("Error: infinite loop detected in list\n");
+			printf("-> [%p] %d\n", (void *) next, next->n);
 			exit(98);
 		}
-	}
-	while (head)
-	{
-		printf("%d\n", head->n);
-		count++;
-		if (head == slow)
-			break;
-		head = head->next;
+		current = next;
 	}
 	return (count);
 }
