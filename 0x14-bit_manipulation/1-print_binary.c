@@ -12,6 +12,6 @@ void print_binary(unsigned long int n)
 	{
 		print_binary(n / 2);
 	}
-	_putchar((n % 2) + "%lu");
+	_putchar((n % 2) + '0');
 }
 
