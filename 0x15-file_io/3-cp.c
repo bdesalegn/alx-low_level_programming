@@ -17,13 +17,11 @@ int main(int argc, char *argv[])
     /* Check if the correct number of arguments was passed*/
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
 		exit(97);
 	}
 
     /* Open file_from for reading */
-	file_from = argv[1];
-	file_to = argv[2];
 	fd_from = open(argv[1], O_RDONLY);
 	if (fd_from == -1)
 	{
