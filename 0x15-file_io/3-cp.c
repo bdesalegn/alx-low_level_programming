@@ -24,18 +24,18 @@ int main(int argc, char *argv[])
     /* Open file_from for reading */
 	file_from = argv[1];
 	file_to = argv[2];
-	fd_from = open(file_from, O_RDONLY);
+	fd_from = open(argv[1], O_RDONLY);
 	if (fd_from == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 
     /* Open file_to for writing (truncating if it already exists)*/
-	fd_to = open(file_to, O_CREAT | O_TRUNC | O_WRONLY | O_APPEND, 0644);
+	fd_to = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY | O_APPEND, 0644);
 	if (fd_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 		bytes_written = write(fd_to, buffer, bytes_read);
 		if (bytes_written != bytes_read)
 		{
-			dprintf(STDERR_FILENO, "Error: Write failed on file %s\n", file_to);
+			dprintf(STDERR_FILENO, "Error: Write failed on file %s\n", argv[2]);
 			exit(99);
 		}
 	}
@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
     /* Check if there was an error during the read operation */
 	if (bytes_read == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Read failed on file %s\n", file_to);
+		dprintf(STDERR_FILENO, "Error: Read failed on file %s\n", argv[1]);
 		exit(98);
 	}
 
