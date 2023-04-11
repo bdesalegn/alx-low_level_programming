@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     /* Open file_from for reading */
 	file_from = argv[1];
 	file_to = argv[2];
-	fd_from = open(argv[1], O_RDONLY);
+	fd_from = open(file_from, O_RDONLY);
 	if (fd_from == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	}
 
     /* Open file_to for writing (truncating if it already exists)*/
-	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	fd_to = open(file_to, O_CREAT | O_TRUNC | O_WRONLY | O_APPEND, 0644);
 	if (fd_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
