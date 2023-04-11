@@ -12,19 +12,22 @@ int main(int argc, char *argv[])
 {
 	int fd_from, fd_to, bytes_read, bytes_written, close_status;
 	char buffer[BUFFER_SIZE];
+	char *file_from, *file_to;
 
     /* Check if the correct number of arguments was passed*/
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
+		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n");
 		exit(97);
 	}
 
     /* Open file_from for reading */
+	file_from = argv[1];
+	file_to = argv[2];
 	fd_from = open(argv[1], O_RDONLY);
 	if (fd_from == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
 
@@ -32,7 +35,7 @@ int main(int argc, char *argv[])
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	if (fd_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
 
@@ -42,7 +45,7 @@ int main(int argc, char *argv[])
 		bytes_written = write(fd_to, buffer, bytes_read);
 		if (bytes_written != bytes_read)
 		{
-			dprintf(STDERR_FILENO, "Error: Write failed on file %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Write failed on file %s\n", file_to);
 			exit(99);
 		}
 	}
@@ -50,7 +53,7 @@ int main(int argc, char *argv[])
     /* Check if there was an error during the read operation */
 	if (bytes_read == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Read failed on file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Read failed on file %s\n", file_to);
 		exit(98);
 	}
 
