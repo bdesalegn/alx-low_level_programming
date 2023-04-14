@@ -6,12 +6,15 @@
 
 int main(int argc, char *argv[])
 {
+	int i, fd = open(argv[1], O_RDONLY);
+	Elf64_Ehdr elf_header;
+
 	if (argc != 2)
 	{
 		fprintf(stderr, "Usage: %s elf_filename\n", argv[0]);
-		exit(98)
+		exit(98);
 	}
-	int fd = open(argv[1], O_RDONLY);
+	/*int i, fd = open(argv[1], O_RDONLY);*/
 
 	if (fd < 0)
 	{
@@ -19,7 +22,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	Elf64_Ehdr elf_header;
+	/*Elf64_Ehdr elf_header;*/
 
 	if (read(fd, &elf_header, sizeof(Elf64_Ehdr)) != sizeof(Elf64_Ehdr))
 	{
@@ -36,7 +39,7 @@ int main(int argc, char *argv[])
 	}
 
 	printf("Magic:   ");
-	for (int i = 0; i < EI_NIDENT; i++)
+	for (i = 0; i < EI_NIDENT; i++)
 	{
 		printf("%02x ", elf_header.e_ident[i]);
 	}
