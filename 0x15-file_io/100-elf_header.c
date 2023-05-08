@@ -5,7 +5,7 @@
  * obtain_file_type - determine the type of files
  * @ehdr: pointer to struct of ELF header features
  */
-voide obtain_file_type(Elf64_Ehdr *ehdr)
+void obtain_file_type(Elf64_Ehdr *ehdr)
 {
 	printf("%-35s", "Type:");
 	switch (ehdr->e_type)
