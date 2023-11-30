@@ -1,5 +1,5 @@
 #include <fcntl.h>
-#include <elf>
+#include <elf.h>
 #include "main.h"
 /* functional prototype*/
 void check_elf(unsigned char *e_ident);
